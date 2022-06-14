@@ -3,15 +3,6 @@
 Réalisation d'un jeu vidéo 2D : **bombeirb**.
 
 
-## Organisation
-
-Le travail est à réaliser en équipe de un à deux étudiants appartenant au même groupe (A, B ou C). Vous devez au préalable former les équipes et les nommer de la forme *GA-2018-T1* pour l'equipe *1* du groupe *A*. 
-
-Nous utilisons la plateforme GitHub pour héberger vos projets. Pour ce faire, vous devez créer un compte utilisateur sur GitHub si vous n'en possédez pas encore. Cliquer ensuite sur le lien [suivant](https://classroom.github.com/g/IRNqYbLC) pour créer votre équipe. Utiliser la convention de nommage précédente. 
-
-Vous avez les droits administrateur sur votre dépôt et celui-ci est privé (GitHub education). Ajouter l'autre membre du groupe. Le dépôt devrait être initialisé avec le contenu de ce dépôt. Vous pouvez maintenant commencer à travailler.
-
-
 ## Principes du jeu
 
 Une princesse est détenue prisonnière par de méchants monstres verts. Votre mission, si vous l'acceptez, est d'aller la délivrer. Pour cela, vous devrez traverser plusieurs mondes, plus effrayants les uns que les autres. Des portes vous permettront de passer de mondes en mondes. Certaines portes seront fermées à clés et nécessiterons d'avoir une clé dans votre inventaire. Vous êtes un expert en explosif et utiliserez vos bombes pour détruire les obstacles devant vous et tuer les monstres qui vous attaquerons.
@@ -31,18 +22,6 @@ Chaque monde est représenté par une carte (rectangulaire) composée de cellule
 -   des bonus ou des malus
 
 ![Bombeirb](img/bombeirb.png)
-
-## Prise en main
-
-Nous vous fournissons une première ébauche du jeu, utilisant les
-bibliothèques [SDL](https://www.libsdl.org) (Simple DirectMedia Layer) et son extension
-*SDL_image* pour l’interface utilisateur et la gestion du 2D. Le
-programme a été testé sur Linux, MacOS et Windows. Le lancement du jeu
-fait apparaitre une [carte](img/bombeirb.png), chargée statiquement en mémoire, dans laquelle le joueur peut se déplacer sans limite dans
-toutes les directions quelque soit la nature des cellules.
-
-
-
 ## Codage des cartes
 
 Une carte de taille `Largeur x Hauteur` est représentée sous la forme
@@ -80,8 +59,6 @@ cellule avec le codage suivant :
 -  **6** : Monstre
 -  **7** : Bombe
 
- 
-
 Les 4 bits de poids faibles (b3 - b0) codent le sous-type de la
 cellule ou des informations complémentaires.
 
@@ -107,12 +84,6 @@ codage suivant
 Le bit b0 code l’état de la porte : **0** = fermée, **1** = ouverte. Les
 bits b3-b1 codent le numéro de la carte atteignable en
 franchissant la porte (8 niveaux maximum possibles).
-
-Travail à fournir
-=================
-
-Il vous est demandé de compléter l’ébauche de jeu fournie, de produire un court rapport d’au plus deux pages, ainsi que de faire une démonstration de votre implantation des fonctionnalités demandées. Le rapport devra contenir, pour chaque fonctionnalité ajoutée, une description de la solution adoptée. Il devra être remis au format `PDF` dans un fichier `rapport.pdf` à la racine de votre arborescence.
-Votre code devra être clairement commenté et indenté. Les fonctions seront nommées en anglais. Les fonctionnalités demandées constituent un cadre obligatoire à partir duquel vous êtes libres d’agrémenter le jeu comme vous l’entendez. Nous décrivons ci-après les fonctionnalités attendues du jeu.
 
 
 Gestion des déplacements
